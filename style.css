@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    background: #1b1028;
+    color: white;
+}
+
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background:
+        linear-gradient(135deg, #ff758c, #ff7eb3, #6a5acd);
+    z-index: -1;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+
+/* Progress Bar */
+
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 20px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: white;
+    transition: 0.5s ease;
+}
+
+
+/* Pages */
+
+.page {
+    display: none;
+    animation: fade 0.5s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+
+@keyframes fade {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Text */
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+
+p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+/* Options */
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+
+.options label {
+
+    background: rgba(255,255,255,0.2);
+    padding: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+
+.options label:hover {
+
+    background: rgba(255,255,255,0.35);
+    transform: translateY(-3px);
+
+}
+
+
+.options input {
+
+    margin-right: 10px;
+
+}
+
+
+/* Inputs */
+
+textarea,
+input[type="text"] {
+
+    width: 100%;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    margin-bottom: 15px;
+    font-size: 15px;
+
+}
+
+
+textarea {
+
+    resize: none;
+
+}
+
+
+/* Buttons */
+
+button {
+
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #ff4f81;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+
+button:hover {
+
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
+}
+
+
+.submit-btn {
+
+    background: #25D366;
+    color: white;
+
+}
+
+
+/* Welcome */
+
+.welcome {
+
+    text-align: center;
+
+}
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+    .container{
+
+        padding:20px;
+        width:95%;
+
+    }
+
+
+    h1{
+
+        font-size:25px;
+
+    }
+
+
+    h2{
+
+        font-size:19px;
+
+    }
+
+}
