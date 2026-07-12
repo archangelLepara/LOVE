@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const message = "Test message - Relationship Reset ❤️";
 
 
-        const phoneNumber = "YOUR_NUMBER_HERE";
+        const phoneNumber = "0894537147";
 
 
         const whatsappURL =
